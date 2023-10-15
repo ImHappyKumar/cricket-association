@@ -12,14 +12,25 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("load", () => {
+    let timeoutId;
+    let loadedEventFired = false;
+
+    const onLoad = () => {
+      loadedEventFired = true;
       setLoaded(true);
-    });
+    };
+
+    window.addEventListener("load", onLoad);
+
+    timeoutId = setTimeout(() => {
+      if (!loadedEventFired) {
+        setLoaded(true);
+      }
+    }, 3000);
 
     return () => {
-      window.removeEventListener("load", () => {
-        setLoaded(false);
-      });
+      window.removeEventListener("load", onLoad);
+      clearTimeout(timeoutId);
     };
   }, []);
 
