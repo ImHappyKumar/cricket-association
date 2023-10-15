@@ -15,6 +15,44 @@ body {
 
 
 
+/* --------------- PRELOADER --------------- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    background: linear-gradient(180deg, #FA0000 0%, #000 123.2%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preloader .logo {
+    width: 100px;
+    height: 100px;
+    background-image: url('./assets/img/logo.png');
+    background-size: cover;
+    animation: logoAnimation 2s ease infinite;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
 /* --------------- HEADER --------------- */
 .navbar .nav-item .active {
     color: #FA0000 !important;
@@ -56,6 +94,14 @@ body {
 #main-slider .legend .slider-text {
     position: absolute;
     bottom: 200px;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform 1.2s ease-in-out;
+}
+
+#main-slider .legend .slider-text.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 #main-slider .legend .slider-text h1 {
@@ -91,6 +137,14 @@ body {
     position: absolute;
     bottom: -65px;
     right: 0;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: transform 1.2s ease-in-out;
+}
+
+#main-slider .legend img.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 
@@ -880,7 +934,7 @@ body {
     #about .company-info h6 {
         font-size: 16px;
     }
-    
+
     #about .company-info h1 {
         font-size: 36px;
     }
@@ -1196,31 +1250,3 @@ body {
         max-width: 380px;
     }
 }
-
-
-
-
-/* MAIN SLIDER */
-
-  
-  #main-slider .legend .slider-text {
-    opacity: 0;
-    transform: translateX(-50%); 
-    transition: transform 0.9s ease-in-out;
-  }
-  
-  #main-slider .legend .slider-text.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  #main-slider .legend img {
-    opacity: 0;
-    transform: translateX(50%);
-    transition: transform 0.9s ease-in-out;
-  }
-  
-  #main-slider .legend img.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
