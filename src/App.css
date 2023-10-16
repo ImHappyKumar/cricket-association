@@ -23,7 +23,6 @@ body {
     width: 100%;
     height: 100%;
     background: #fff;
-    /* background: linear-gradient(180deg, #FA0000 0%, #000 123.2%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -705,12 +704,16 @@ body {
     margin-bottom: 100px;
 }
 
+#contact .form-section {
+    position: relative;
+}
+
 #contact .contact-form {
     position: absolute;
-    top: 455px;
+    top: -80px;
     left: 0;
     right: 0;
-    width: 55%;
+    width: 800px;
     background: white;
 }
 
@@ -740,7 +743,7 @@ body {
     border-radius: 50px;
     background: #FA0000;
     border: none;
-    width: 315px;
+    width: 25%;
     height: 46px;
     color: #FFF;
     font-family: 'Open Sans', sans-serif;
@@ -903,10 +906,6 @@ body {
     #about .company-info .company-history img {
         margin-left: -358px;
     }
-
-    #contact .contact-form {
-        top: 400px;
-    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -945,6 +944,10 @@ body {
 }
 
 @media only screen and (max-width: 992px) {
+    .navbar .nav-item-2 {
+        margin-top: -8px;
+    }
+
     #main-slider .legend .slider-text {
         bottom: 100px;
     }
@@ -978,6 +981,15 @@ body {
     #about .company-info .company-history img,
     #about .company-info .company-work img {
         margin-left: 50px;
+    }
+
+    #contact .contact-form {
+        top: -60px;
+        width: 600px;
+    }
+
+    #contact .contact-details {
+        margin-top: 675px;
     }
 }
 
@@ -1024,6 +1036,15 @@ body {
     #about .company-info .company-history img,
     #about .company-info .company-work img {
         width: 450px;
+    }
+
+    #contact .contact-form {
+        top: -50px;
+        width: 80%;
+    }
+
+    #contact .contact-details {
+        margin-top: 883px;
     }
 
     .banner .overlay-text {
@@ -1100,6 +1121,19 @@ body {
     #about .company-info .company-history img,
     #about .company-info .company-work img {
         margin-left: 25px;
+    }
+
+    #contact .contact-form {
+        top: -25px;
+        width: 80%;
+    }
+
+    #contact .contact-form .btn-primary {
+        width: 50%;
+    }
+
+    #contact .contact-details {
+        margin-top: 905px;
     }
 
     .heading {

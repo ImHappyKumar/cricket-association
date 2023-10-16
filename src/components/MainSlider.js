@@ -16,12 +16,12 @@ const MainSlider = () => {
     <div id="main-slider">
       <Carousel
         showIndicators={false}
-        showArrows={true}
+        showArrows={false}
         showThumbs={false}
         showStatus={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={2000}
+        interval={4000}
         selectedItem={activeSlide}
         onChange={handleSlideChange}
       >

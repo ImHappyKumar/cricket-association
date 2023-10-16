@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+  useMatch,
+} from "react-router-dom";
 import "./App.css";
 import Preloader from "./components/Preloader";
 import Header from "./components/Header";
@@ -12,32 +19,36 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    let timeoutId;
-    let loadedEventFired = false;
-
-    const onLoad = () => {
-      loadedEventFired = true;
+    const timer = setTimeout(() => {
       setLoaded(true);
-    };
-
-    window.addEventListener("load", onLoad);
-
-    timeoutId = setTimeout(() => {
-      if (!loadedEventFired) {
-        setLoaded(true);
-      }
     }, 3000);
 
     return () => {
-      window.removeEventListener("load", onLoad);
-      clearTimeout(timeoutId);
+      clearTimeout(timer);
     };
   }, []);
+
+  function ScrollToTop() {
+    const { pathname, key } = useLocation();
+    const navigate = useNavigate();
+    const match = useMatch(pathname);
+
+    useEffect(() => {
+      if (!match) {
+        navigate(pathname);
+      } else {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    }, [pathname, key, match, navigate]);
+
+    return null;
+  }
 
   return (
     <>
       {loaded ? (
         <Router>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
