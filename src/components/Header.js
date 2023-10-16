@@ -33,7 +33,7 @@ const Header = () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
-  
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top py-0">
       <div className="container" ref={navbarRef}>
