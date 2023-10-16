@@ -6,9 +6,10 @@ const Header = () => {
   const navbarRef = useRef(null);
 
   const closeNavbar = () => {
-    const navbarToggle = document.getElementById("navbarToggle");
-    if (navbarToggle) {
-      navbarToggle.click();
+    const navbar = document.getElementById("navbarSupportedContent");
+    if (navbar.classList.contains("show")) {
+      const navbarToggler = document.getElementById("navbarToggler");
+      navbarToggler.click();
     }
   };
 
@@ -43,7 +44,7 @@ const Header = () => {
               <img src={Logo} alt="logo" style={{ width: "55px" }} />
             </NavLink>
             <button
-              id="navbarToggle"
+              id="navbarToggler"
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
