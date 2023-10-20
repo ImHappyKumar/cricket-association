@@ -716,12 +716,6 @@ body {
     border-radius: 40px;
 }
 
-#news .latest-articles .articles .overlay-image {
-    width: 100%;
-    height: auto;
-    border-radius: 40px;
-}
-
 #news .latest-articles .articles::before {
     position: absolute;
     top: 0;
@@ -731,6 +725,12 @@ body {
     opacity: 0.5;
     content: "";
     background: linear-gradient(91deg, #000 0.06%, rgba(0, 0, 0, 0.00) 80.36%);
+    border-radius: 40px;
+}
+
+#news .latest-articles .articles .overlay-image {
+    width: 100%;
+    height: auto;
     border-radius: 40px;
 }
 
@@ -1067,8 +1067,6 @@ body {
     #news .latest-articles .btn-primary {
         padding: 10px 50px;
     }
-
-
 }
 
 @media only screen and (max-width: 992px) {
@@ -1111,15 +1109,6 @@ body {
         margin-left: 50px;
     }
 
-    #contact .contact-form {
-        top: -60px;
-        width: 600px;
-    }
-
-    #contact .contact-details {
-        margin-top: 675px;
-    }
-
     #news .latest-articles .articles .overlay-text h4 {
         font-size: 24px;
     }
@@ -1127,6 +1116,15 @@ body {
     #news .latest-articles .articles .overlay-text p {
         max-height: 41px;
         overflow: hidden;
+    }
+
+    #contact .contact-form {
+        top: -60px;
+        width: 600px;
+    }
+
+    #contact .contact-details {
+        margin-top: 675px;
     }
 }
 
@@ -1175,20 +1173,18 @@ body {
         width: 450px;
     }
 
-    #contact .contact-form {
-        top: -50px;
-        width: 80%;
-    }
-
-    #contact .contact-details {
-        margin-top: 883px;
-    }
-
     #news .latest-articles .articles {
         border-radius: 8px;
         width: 100%;
-        height: 400px;
+        height: 360px;
         overflow: hidden;
+    }
+
+    #news .latest-articles .articles::before {
+        width: 100%;
+        height: 360px;
+        border-radius: 8px;
+        background: linear-gradient(357deg, #000 2.62%, rgba(0, 0, 0, 0.00) 100%);
     }
 
     #news .latest-articles .articles .overlay-image {
@@ -1199,10 +1195,16 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: -1;
     }
 
-    #news .latest-articles .articles::before {
-        border-radius: 8px;
+    #contact .contact-form {
+        top: -50px;
+        width: 80%;
+    }
+
+    #contact .contact-details {
+        margin-top: 883px;
     }
 
     .banner .overlay-text {
@@ -1279,6 +1281,18 @@ body {
     #about .company-info .company-history img,
     #about .company-info .company-work img {
         margin-left: 25px;
+    }
+
+    #news .latest-articles h4 {
+        font-size: 28px;
+    }
+
+    #news .latest-articles .articles .overlay-text h4 {
+        font-size: 20px;
+    }
+
+    #news .latest-articles .btn-primary {
+        padding: 8px 40px;
     }
 
     #contact .contact-form {
