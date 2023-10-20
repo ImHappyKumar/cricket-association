@@ -36,12 +36,12 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top py-0">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top py-2">
       <div className="container" ref={navbarRef}>
         <div className="d-lg-flex justify-content-between align-items-center w-100">
           <div className="d-flex justify-content-between align-items-center">
             <NavLink className="navbar-brand" to="/">
-              <img src={Logo} alt="logo" style={{ width: "55px" }} />
+              <img src={Logo} alt="logo" style={{ width: "75px", position: "absolute", top: "0" }} />
             </NavLink>
             <button
               id="navbarToggler"
@@ -57,7 +57,7 @@ const Header = () => {
             </button>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mx-auto mt-4 mb-2 mt-lg-0 mb-lg-0">
               <li className="nav-item me-4">
                 <NavLink
                   className="nav-link text-uppercase"

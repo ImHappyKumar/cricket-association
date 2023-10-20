@@ -1,100 +1,133 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa6";
+import Logo from "../assets/img/logo.png";
+import { FiLinkedin, FiInstagram, FiFacebook } from "react-icons/fi";
 
 const Footer = () => {
   return (
     <div id="footer">
-      <div className="footer-content col-lg-6 col-sm-8 col-12 d-flex flex-column align-items-center text-white pt-5 px-sm-0 px-4 mx-auto">
-        <nav>
-          <ul className="d-flex p-0" style={{ listStyle: "none" }}>
-            <li className="me-sm-5 me-4">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                Home
-              </Link>
-            </li>
-            <li className="me-sm-5 me-4">
-              <Link
-                to="/about"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                About Us
-              </Link>
-            </li>
-            <li className="me-sm-5 me-4">
-              <Link
-                to="/contact"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/news"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                News
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <p className="text-center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas optio
-          magnam perspiciatis ab officia rem inventore fugit culpa, qui
-          voluptatibus architecto, quod, fugiat possimus? Vitae!
-        </p>
-        <div className="social-icons mt-4">
-          <nav>
-            <ul className="d-flex" style={{ listStyle: "none" }}>
-              <li className="me-5">
-                <Link
-                  to="https://facebook.com/"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <FaFacebookF />
-                </Link>
-              </li>
-              <li className="me-5">
-                <Link
-                  to="https://instagram.com/"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <FaInstagram />
-                </Link>
-              </li>
-              <li className="me-5">
-                <Link
-                  to="https://twitter.com/"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <FaTwitter />
-                </Link>
-              </li>
-              <li className="me-5">
-                <Link
-                  to="https://linkedin.com/"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <FaLinkedinIn />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="https://youtube.com/"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  <FaYoutube />
-                </Link>
-              </li>
-            </ul>
-          </nav>
+      <div className="footer-content">
+        <div className="container">
+          <div className="logo">
+            <img src={Logo} alt="logo" style={{ width: "80px" }} />
+          </div>
+          <div className="container d-flex text-white py-5">
+            <div className="col-4 me-2">
+              <h6 className="text-uppercase mb-3">Heading</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Proin blandit a lacus
+                mattis. Aliquam justo
+              </p>
+            </div>
+            <div className="col-2 mx-5">
+              <ul style={{ listStyle: "none" }}>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    Blogs
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    About us
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    Resposible gaming
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="text-decoration-none text-white">
+                    Privacy policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-2 mx-5">
+              <ul style={{ listStyle: "none" }}>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    Cancellation & Refund
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    FAQ
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    Terms & Condition
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    News & Media
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="text-decoration-none text-white">
+                    Legalities
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-3">
+              <ul style={{ listStyle: "none" }}>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    Contact Us or Follow Us:
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    +123456789
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="/" className="text-decoration-none text-white">
+                    www.companyname.com
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <ul className="d-flex px-0" style={{ listStyle: "none" }}>
+                    <li className="me-3">
+                      <a href="/" className="text-decoration-none text-white">
+                        <i style={{ fontSize: "20px" }}>
+                          <FiFacebook />
+                        </i>
+                      </a>
+                    </li>
+                    <li className="me-3">
+                      <a href="/" className="text-decoration-none text-white">
+                        <i style={{ fontSize: "20px" }}>
+                          <FiInstagram />
+                        </i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" className="text-decoration-none text-white">
+                        <i style={{ fontSize: "20px" }}>
+                          <FiLinkedin />
+                        </i>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="container-fluid text-white text-center py-3"
+          style={{ borderTop: "1px solid #fff" }}
+        >
+          © 2023 TFG All rights reserved.
         </div>
       </div>
     </div>

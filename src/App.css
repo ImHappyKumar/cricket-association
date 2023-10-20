@@ -589,12 +589,12 @@ body {
 #our-shop .item-price {
     color: #FA0000;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-#our-shop .item-price {
+#our-shop .item-title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 #our-shop .btn-primary {
@@ -602,6 +602,7 @@ body {
     border-radius: 37px;
     border: 1px solid #FA0000;
     color: #FA0000;
+    font-size: 16px;
     transition: all ease-in-out 0.5s;
     -webkit-transition: all ease-in-out 0.5s;
 }
@@ -694,6 +695,94 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 600;
+}
+
+
+
+/* --------------- NEWS ---------------  */
+#news {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 100px;
+}
+
+#news .latest-articles h4 {
+    color: #474747;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#news .latest-articles .articles {
+    position: relative;
+    border-radius: 40px;
+}
+
+#news .latest-articles .articles .overlay-image {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+#news .latest-articles .articles::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    content: "";
+    background: linear-gradient(91deg, #000 0.06%, rgba(0, 0, 0, 0.00) 80.36%);
+    border-radius: 40px;
+}
+
+#news .latest-articles .articles .overlay-text {
+    position: absolute;
+    left: 25px;
+    width: 90%;
+    bottom: 50px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.80);
+    line-height: 133%;
+}
+
+#news .latest-articles .articles .overlay-text .date {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#news .latest-articles .articles .overlay-text h4 {
+    color: #FFF;
+    font-weight: 700;
+}
+
+#news .latest-articles .btn-primary {
+    background: #FA0000;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 60px;
+    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.5s;
+}
+
+#news .latest-articles .btn-primary:hover {
+    background: #7c859a;
+}
+
+#news .latest-articles #article-1 .overlay-image,
+#news .latest-articles #article-5 .overlay-image {
+    height: 450px;
+}
+
+#news .latest-articles #article-2 .overlay-image {
+    height: 510px;
+}
+
+#news .latest-articles #article-3 .overlay-image {
+    height: 410px;
+}
+
+#news .latest-articles #article-4 .overlay-image {
+    height: 944px;
 }
 
 
@@ -793,8 +882,25 @@ body {
 
 /* --------------- FOOTER --------------- */
 #footer {
-    background: linear-gradient(180deg, #FA0000 0%, #000 123.2%);
     font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+#footer .footer-content {
+    width: 100%;
+}
+
+#footer .footer-content::before {
+    content: "";
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url("./assets/img/footer-bg.png"), lightgray 50% / cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.95;
+    z-index: -1;
+
 }
 
 
@@ -941,6 +1047,28 @@ body {
     #about .company-info h1 {
         font-size: 36px;
     }
+
+    #news .latest-articles #article-1 .overlay-image,
+    #news .latest-articles #article-2 .overlay-image,
+    #news .latest-articles #article-3 .overlay-image,
+    #news .latest-articles #article-4 .overlay-image,
+    #news .latest-articles #article-5 .overlay-image {
+        height: auto;
+    }
+
+    #news .latest-articles .articles .overlay-text {
+        bottom: 25px;
+    }
+
+    #news .latest-articles .articles .overlay-text h4 {
+        font-size: 32px;
+    }
+
+    #news .latest-articles .btn-primary {
+        padding: 10px 50px;
+    }
+
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -990,6 +1118,15 @@ body {
 
     #contact .contact-details {
         margin-top: 675px;
+    }
+
+    #news .latest-articles .articles .overlay-text h4 {
+        font-size: 24px;
+    }
+
+    #news .latest-articles .articles .overlay-text p {
+        max-height: 41px;
+        overflow: hidden;
     }
 }
 
@@ -1045,6 +1182,27 @@ body {
 
     #contact .contact-details {
         margin-top: 883px;
+    }
+
+    #news .latest-articles .articles {
+        border-radius: 8px;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    #news .latest-articles .articles .overlay-image {
+        border-radius: 8px;
+        width: auto;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #news .latest-articles .articles::before {
+        border-radius: 8px;
     }
 
     .banner .overlay-text {

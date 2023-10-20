@@ -22,6 +22,7 @@ const MainSlider = () => {
         infiniteLoop={true}
         autoPlay={true}
         interval={4000}
+        stopOnHover={false}
         selectedItem={activeSlide}
         onChange={handleSlideChange}
       >

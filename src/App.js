@@ -12,6 +12,7 @@ import Preloader from "./components/Preloader";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
+import News from "./components/News";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -53,9 +54,10 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/news" element={<News />}></Route>
             <Route exact path="/contact" element={<Contact />}></Route>
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       ) : (
         <Preloader />

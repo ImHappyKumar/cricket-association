@@ -185,7 +185,7 @@ const About = () => {
         </div>
 
         <div className="our-team container p-0 my-5 pt-sm-5 pt-0">
-          <div className="row">
+          <div className="container-fluid d-flex flex-wrap">
             <div className="col-lg-6 col-12">
               <h6 className="text-uppercase">Our team</h6>
               <h2 className="text-capitalize">Meet with expert</h2>
