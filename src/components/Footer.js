@@ -10,16 +10,16 @@ const Footer = () => {
           <div className="logo">
             <img src={Logo} alt="logo" style={{ width: "80px" }} />
           </div>
-          <div className="container d-flex text-white py-5">
-            <div className="col-4 me-2">
+          <div className="container d-flex flex-wrap text-white py-5">
+            <div className="col-md-3 col-12 me-xxl-5 pe-md-5 pe-xxl-0">
               <h6 className="text-uppercase mb-3">Heading</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur. Proin blandit a lacus
                 mattis. Aliquam justo
               </p>
             </div>
-            <div className="col-2 mx-5">
-              <ul style={{ listStyle: "none" }}>
+            <div className="col-md-3 col-12 mt-5 mt-md-0">
+              <ul className="ps-0 ps-md-4" style={{ listStyle: "none" }}>
                 <li className="mb-2">
                   <a href="/" className="text-decoration-none text-white">
                     Blogs
@@ -47,8 +47,8 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-2 mx-5">
-              <ul style={{ listStyle: "none" }}>
+            <div className="col-md-3 col-12">
+              <ul className="ps-0 ps-md-3" style={{ listStyle: "none" }}>
                 <li className="mb-2">
                   <a href="/" className="text-decoration-none text-white">
                     Cancellation & Refund
@@ -76,8 +76,8 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-3">
-              <ul style={{ listStyle: "none" }}>
+            <div className="col-xxl-2 col-md-3 col-12">
+              <ul className="ps-0 ps-md-3" style={{ listStyle: "none" }}>
                 <li className="mb-2">
                   <a href="/" className="text-decoration-none text-white">
                     Contact Us or Follow Us:

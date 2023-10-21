@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Banner from "../assets/img/banner.jpg";
 import Article1 from "../assets/img/latest-article-1.jpg";
 import Article2 from "../assets/img/latest-article-2.jpg";
@@ -20,7 +21,7 @@ const News = () => {
             <div className="articles" id="article-1">
               <img src={Article1} alt="article-1" className="overlay-image" />
               <div className="overlay-text">
-              <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
+                <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
                 <h4 className="mb-2 mb-md-3 mb-xl-4">
                   The Latest Cricket Developments A Thrilling Journey On The
                   Pitch
@@ -36,9 +37,9 @@ const News = () => {
                   to new heights.
                 </p>
 
-                <a href="/" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
+                <Link to="/news/article-1" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -59,7 +60,9 @@ const News = () => {
                   />
                   <div className="overlay-text">
                     <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
-                    <h4 className="mb-2 mb-md-3 mb-xl-4">Cricket WorldCup 2023</h4>
+                    <h4 className="mb-2 mb-md-3 mb-xl-4">
+                      Cricket WorldCup 2023
+                    </h4>
                     <p>
                       India boasts a plethora of world-class cricket stadiums
                       that are renowned for their electrifying atmosphere and
@@ -68,14 +71,17 @@ const News = () => {
                       country, offering unique experiences to players and
                       spectators alike
                     </p>
-                    <a href="/" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
+                    <Link
+                      to="/news/article-2"
+                      className="btn btn-primary mt-2 mt-md-3 mt-xl-4"
+                    >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="col-12 mt-4 mt-md-5 mt-xl-4">
-              <div className="articles" id="article-3">
+                <div className="articles" id="article-3">
                   <img
                     src={Article3}
                     alt="article-3"
@@ -87,8 +93,10 @@ const News = () => {
                     className="overlay-image d-xl-none"
                   />
                   <div className="overlay-text">
-                  <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
-                    <h4 className="mb-2 mb-md-3 mb-xl-4">Cricket WorldCup 2023</h4>
+                    <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
+                    <h4 className="mb-2 mb-md-3 mb-xl-4">
+                      Cricket WorldCup 2023
+                    </h4>
                     <p>
                       India boasts a plethora of world-class cricket stadiums
                       that are renowned for their electrifying atmosphere and
@@ -97,41 +105,45 @@ const News = () => {
                       country, offering unique experiences to players and
                       spectators alike
                     </p>
-                    <a href="/" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
+                    <Link
+                      to="/news/article-3"
+                      className="btn btn-primary mt-2 mt-md-3 mt-xl-4"
+                    >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-12 mt-4 mt-md-5 mt-xl-0 col-xl-6 ps-xl-3">
-            <div className="articles" id="article-4">
-                  <img
-                    src={Article4}
-                    alt="article-4"
-                    className="overlay-image d-none d-xl-block"
-                  />
-                  <img
-                    src={Article1}
-                    alt="article-4"
-                    className="overlay-image d-xl-none"
-                  />
-                  <div className="overlay-text">
+              <div className="articles" id="article-4">
+                <img
+                  src={Article4}
+                  alt="article-4"
+                  className="overlay-image d-none d-xl-block"
+                />
+                <img
+                  src={Article1}
+                  alt="article-4"
+                  className="overlay-image d-xl-none"
+                />
+                <div className="overlay-text">
                   <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
-                    <h4 className="mb-2 mb-md-3 mb-xl-4">Cricket WorldCup 2023</h4>
-                    <p>
-                      India boasts a plethora of world-class cricket stadiums
-                      that are renowned for their electrifying atmosphere and
-                      grandeur. The ICC Cricket World Cup 2023 will be played
-                      across several iconic venues in different parts of the
-                      country, offering unique experiences to players and
-                      spectators alike
-                    </p>
-                    <a href="/" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
-                      Read More
-                    </a>
-                  </div>
+                  <h4 className="mb-2 mb-md-3 mb-xl-4">
+                    Cricket WorldCup 2023
+                  </h4>
+                  <p>
+                    India boasts a plethora of world-class cricket stadiums that
+                    are renowned for their electrifying atmosphere and grandeur.
+                    The ICC Cricket World Cup 2023 will be played across several
+                    iconic venues in different parts of the country, offering
+                    unique experiences to players and spectators alike
+                  </p>
+                  <Link to="/news/article-4" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
+                    Read More
+                  </Link>
                 </div>
+              </div>
             </div>
           </div>
 
@@ -139,7 +151,7 @@ const News = () => {
             <div className="articles" id="article-5">
               <img src={Article1} alt="article-5" className="overlay-image" />
               <div className="overlay-text">
-              <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
+                <h6 className="date text-uppercase mb-1">June 6, 2023</h6>
                 <h4 className="mb-2 mb-md-3 mb-xl-4">
                   The Latest Cricket Developments A Thrilling Journey On The
                   Pitch
@@ -155,9 +167,9 @@ const News = () => {
                   to new heights.
                 </p>
 
-                <a href="/" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
+                <Link to="/news/article-5" className="btn btn-primary mt-2 mt-md-3 mt-xl-4">
                   Read More
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -787,6 +787,68 @@ body {
 
 
 
+/* --------------- FULL NEWS ---------------  */
+#full-news {
+    font-family: 'Roboto', sans-serif;
+}
+
+#full-news .banner .overlay-image {
+    height: 600px;
+}
+
+#full-news .banner .overlay-text {
+    top: 45%;
+    left: 10%;
+    transform: translate(0%, 0%);
+    width: 550px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#full-news .banner .overlay-text h5 {
+    font-size: 36px;
+    line-height: 130.3%;
+    font-weight: 600;
+}
+
+#full-news .download-app h4 {
+    color: #3C3C3C;
+    font-weight: 700;
+}
+
+#full-news .download-app #download-ios-app {
+    background: linear-gradient(180deg, #19CEFD 0%, #0073D1 100%);
+    border: none;
+    width: 141px;
+    line-height: 1;
+}
+
+#full-news .download-app #download-ios-app i {
+    font-size: 20px;
+}
+
+#full-news .download-app #download-ios-app span {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#full-news .download-app #download-ios-app span strong {
+    font-size: 14px;
+}
+
+#full-news .download-app #download-android-app {
+    background: #00A057;
+    ;
+    font-size: 14px;
+}
+
+#full-news .download-app #download-android-app i {
+    font-size: 20px;
+}
+
+
+
 /* --------------- CONTACT ---------------  */
 #contact {
     position: relative;
@@ -1198,6 +1260,14 @@ body {
         z-index: -1;
     }
 
+    #full-news .banner .overlay-text {
+        width: 420px;
+    }
+
+    #full-news .banner .overlay-text h5 {
+        font-size: 28px;
+    }
+
     #contact .contact-form {
         top: -50px;
         width: 80%;
@@ -1293,6 +1363,23 @@ body {
 
     #news .latest-articles .btn-primary {
         padding: 8px 40px;
+    }
+
+    #full-news .banner .overlay-image {
+        height: 300px;
+    }
+
+    #full-news .banner .overlay-text {
+        top: 0;
+        bottom: 0;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        height: 300px;
+    }
+
+    #full-news .banner .overlay-text h5 {
+        font-size: 24px;
     }
 
     #contact .contact-form {
