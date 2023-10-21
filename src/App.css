@@ -839,7 +839,7 @@ body {
 
 #full-news .download-app #download-android-app {
     background: #00A057;
-    ;
+    border: none;
     font-size: 14px;
 }
 
