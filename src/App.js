@@ -3,9 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
-  useNavigate,
-  useMatch,
+  Outlet
 } from "react-router-dom";
 import "./App.css";
 import Preloader from "./components/Preloader";
@@ -16,6 +14,7 @@ import News from "./components/News";
 import FullNews from "./components/FullNews";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhoAreYou from "./components/WhoAreYou";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -30,36 +29,29 @@ function App() {
     };
   }, []);
 
-  function ScrollToTop() {
-    const { pathname, key } = useLocation();
-    const navigate = useNavigate();
-    const match = useMatch(pathname);
-
-    useEffect(() => {
-      if (!match) {
-        navigate(pathname);
-      } else {
-        window.scrollTo({ top: 0, behavior: "instant" });
-      }
-    }, [pathname, key, match, navigate]);
-
-    return null;
-  }
-
   return (
     <>
       {loaded ? (
         <Router>
-          <ScrollToTop />
-          <Header />
           <Routes>
-            <Route exact path="/" element={<Home />}></Route>
-            <Route exact path="/about" element={<About />}></Route>
-            <Route exact path="/news" element={<News />}></Route>
-            <Route exact path="/news/:id" element={<FullNews />}></Route>
-            <Route exact path="/contact" element={<Contact />}></Route>
+            <Route path="/signin" element={<WhoAreYou title={"Login"} linkMessage={"Don't have an account?"} linkButton={"Signup"} link={"/signup"} />} />
+            <Route path="/signup" element={<WhoAreYou title={"Create Account"} linkMessage={"Already have an account?"} linkButton={"Signin"} link={"/signin"} />} />
+            <Route
+              element={
+                <>
+                  <Header />
+                  <Outlet />
+                  <Footer />
+                </>
+              }
+            >
+              <Route index element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/news/:id" element={<FullNews />} />
+              <Route path="/contact" element={<Contact />} />
+            </Route>
           </Routes>
-          <Footer />
         </Router>
       ) : (
         <Preloader />

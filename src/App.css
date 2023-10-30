@@ -967,6 +967,52 @@ body {
 
 
 
+/* --------------- WHO ARE YOU --------------- */
+#who-are-you {
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+#who-are-you h2 {
+    font-size: 44px;
+    font-weight: 600;
+}
+
+#who-are-you h4 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#who-are-you h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#who-are-you .btn-primary {
+    width: 200px;
+    height: 64px;
+    border: none;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#who-are-you a {
+    color: #2D3748;
+    text-decoration: underline;
+}
+
+#who-are-you a span {
+    color: #00A1FF;
+    text-decoration: underline;
+}
+
+
+
 /* --------------- UTILITY CLASSES --------------- */
 .heading {
     position: relative;
@@ -1187,6 +1233,24 @@ body {
 
     #contact .contact-details {
         margin-top: 675px;
+    }
+
+    #who-are-you h2 {
+        font-size: 38px;
+    }
+    
+    #who-are-you h4 {
+        font-size: 24px;
+    }
+    
+    #who-are-you h6 {
+        font-size: 18px;
+    }
+    
+    #who-are-you .btn-primary {
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
     }
 }
 
@@ -1537,6 +1601,24 @@ body {
 
     #about .company-info h2 {
         font-size: 22px;
+    }
+
+    #who-are-you h2 {
+        font-size: 32px;
+    }
+    
+    #who-are-you h4 {
+        font-size: 20px;
+    }
+    
+    #who-are-you h6 {
+        font-size: 16px;
+    }
+    
+    #who-are-you .btn-primary {
+        width: 140px;
+        height: 40px;
+        font-size: 18px;
     }
 
     .banner .overlay-image {
