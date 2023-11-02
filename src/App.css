@@ -967,22 +967,25 @@ body {
 
 
 
-/* --------------- WHO ARE YOU --------------- */
-#who-are-you {
+/* --------------- LOGIN --------------- */
+#login {
     color: #222;
     font-family: 'Poppins', sans-serif;
 }
 
-#who-are-you h2 {
+#login h2 {
     font-size: 44px;
     font-weight: 600;
 }
 
-#who-are-you h4 {
+#login h4 {
     font-size: 28px;
     font-weight: 500;
 }
 
+
+
+/* --------------- WHO ARE YOU --------------- */
 #who-are-you h6 {
     font-size: 20px;
     font-weight: 500;
@@ -1235,18 +1238,18 @@ body {
         margin-top: 675px;
     }
 
-    #who-are-you h2 {
+    #login h2 {
         font-size: 38px;
     }
-    
-    #who-are-you h4 {
+
+    #login h4 {
         font-size: 24px;
     }
-    
+
     #who-are-you h6 {
         font-size: 18px;
     }
-    
+
     #who-are-you .btn-primary {
         width: 180px;
         height: 50px;
@@ -1603,18 +1606,18 @@ body {
         font-size: 22px;
     }
 
-    #who-are-you h2 {
+    #login h2 {
         font-size: 32px;
     }
-    
-    #who-are-you h4 {
+
+    #login h4 {
         font-size: 20px;
     }
-    
+
     #who-are-you h6 {
         font-size: 16px;
     }
-    
+
     #who-are-you .btn-primary {
         width: 140px;
         height: 40px;
